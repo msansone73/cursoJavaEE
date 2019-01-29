@@ -14,11 +14,6 @@ import javax.ws.rs.core.Response;
 import br.com.msansone.hellotodo.entity.Todo;
 import br.com.msansone.hellotodo.service.TodoService;
 
-/**
- *
- * @author Seeraj
- */
-
 @Path("todo")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)

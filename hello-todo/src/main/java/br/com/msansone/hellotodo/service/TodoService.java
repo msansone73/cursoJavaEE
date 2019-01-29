@@ -8,7 +8,6 @@ import javax.transaction.Transactional;
 import br.com.msansone.hellotodo.dao.TodoDao;
 import br.com.msansone.hellotodo.entity.Todo;
 
-
 @Transactional
 public class TodoService {
 
