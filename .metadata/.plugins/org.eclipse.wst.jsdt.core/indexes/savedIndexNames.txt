@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/msansone/Documents/git/cursoJavaEE/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+4024818433.index
+1134356076.index
+3987512931.index
+3068999480.index
+3670861425.index
+2855485955.index

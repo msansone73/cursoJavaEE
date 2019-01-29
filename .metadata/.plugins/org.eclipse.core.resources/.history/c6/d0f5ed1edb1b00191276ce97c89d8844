@@ -1,0 +1,19 @@
+package br.com.msansone.hellotodo.rest;
+
+import javax.inject.Inject;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import br.com.msansone.hellotodo.service.TodoService;
+
+@Path("Todo")
+@Consumes(MediaType.APPLICATION_JSON_PATCH_JSON)
+@Produces(MediaType.APPLICATION_JSON_PATCH_JSON)
+public class TodoRest {
+	
+	@Inject
+	TodoService todoService;
+
+}

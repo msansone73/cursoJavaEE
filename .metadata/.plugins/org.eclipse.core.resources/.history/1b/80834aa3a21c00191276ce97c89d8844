@@ -1,0 +1,49 @@
+package br.com.msansone.hellotodo.service;
+
+import javax.persistence.PersistenceContext;
+
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+
+import br.com.msansone.hellotodo.dao.TodoDao;
+import br.com.msansone.hellotodo.entity.Todo;
+
+
+@Transactional
+public class TodoService {
+
+	
+	
+	//@PersistenceContext(name="oraclexe")
+	//EntityManager entityManager;
+
+	@Inject 
+	private TodoDao todoDao;
+
+	public Todo createTodo(Todo todo) {
+		//entityManager.persist(todo);
+		todoDao.createTodo(todo);
+		return todo;
+		
+	}
+	
+	public Todo updateTodo(Todo todo ) {
+		//entityManager.merge(todo);
+		todoDao.updateTodo(todo);
+		return todo;
+	}
+	
+	public Todo findTodoById(Long id) {
+		//return entityManager.find(Todo.class, id);
+		return todoDao.findTodoById(id);
+	}
+	
+	public List<Todo> getTodos(){
+//		return entityManager.createQuery("SELECT t FROM Todo t", Todo.class).getResultList();
+		return todoDao.getTodos();
+	}
+	
+}
