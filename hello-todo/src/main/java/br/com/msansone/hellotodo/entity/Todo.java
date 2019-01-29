@@ -33,7 +33,8 @@ public class Todo {
 	private Boolean isComplete;
 	private LocalDate dateCompleted;
 	private LocalDate dateCreated;
-	
+
+	@NotNull(message="Usuario obrigatório.")
 	@ManyToOne
 	private Usuario usuario;
 	
