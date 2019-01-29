@@ -1,10 +1,17 @@
 package br.com.msansone.hellotodo.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-public class Usuario extends AbstractEntity {
+public class Usuario {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
 	
 	@NotEmpty(message="Campo nome é obrigatório.")
 	private String nome;
@@ -14,6 +21,15 @@ public class Usuario extends AbstractEntity {
 	private String email;
 	@NotEmpty(message="Campo senha é obrigatório.")
 	private String senha;
+	
+	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}

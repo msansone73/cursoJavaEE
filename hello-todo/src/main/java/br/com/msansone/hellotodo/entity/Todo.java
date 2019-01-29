@@ -14,8 +14,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Todo  extends AbstractEntity  {
+public class Todo {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
 	
 	@NotEmpty(message="Campo Task é obrigatório.")
 	@Size(min=10, message= "Tamanho do cmapo Task, menor do que esperado.")
@@ -25,12 +28,21 @@ public class Todo  extends AbstractEntity  {
 	@FutureOrPresent(message="A data não pode estar no passado.")
 	@JsonbDateFormat(value="yyyy-MM-dd")
 	private LocalDate dueDate;
-	
-	
+		
 	private Boolean isComplete;
 	private LocalDate dateCompleted;
 	private LocalDate dateCreated;
 	
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	@PrePersist
 	private void init() {
 		setDateCreated(LocalDate.now());

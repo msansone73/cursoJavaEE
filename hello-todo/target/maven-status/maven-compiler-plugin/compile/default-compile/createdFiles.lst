@@ -1,6 +1,5 @@
 br/com/msansone/hellotodo/service/TodoService.class
 br/com/msansone/hellotodo/entity/Todo.class
-br/com/msansone/hellotodo/entity/AbstractEntity.class
 br/com/msansone/hellotodo/dao/TodoDao.class
 br/com/msansone/hellotodo/rest/TodoConfig.class
 br/com/msansone/hellotodo/rest/TodoRest.class
