@@ -14,11 +14,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Todo {
+public class Todo  extends AbstractEntity  {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
 	
 	@NotEmpty(message="Campo Task é obrigatório.")
 	@Size(min=10, message= "Tamanho do cmapo Task, menor do que esperado.")
@@ -40,12 +37,6 @@ public class Todo {
 		setIsComplete(false);
 	}
 	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
 	public String getTask() {
 		return task;
 	}

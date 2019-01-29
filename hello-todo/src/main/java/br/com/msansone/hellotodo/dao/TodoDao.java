@@ -7,13 +7,12 @@ import br.com.msansone.hellotodo.entity.Todo;
 
 
 @Stateless
-public class TodoDao extends AbstractDao{
+public class TodoDao extends AbstractDao {
 
 
 	public Todo createTodo(Todo todo) {
 		entityManager.persist(todo);
-		return todo;
-		
+		return todo;	
 	}
 	
 	public Todo updateTodo(Todo todo ) {

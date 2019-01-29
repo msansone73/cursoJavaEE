@@ -2,5 +2,8 @@
 /Users/msansone/Documents/git/cursoJavaEE/hello-todo/src/main/java/br/com/msansone/hellotodo/dao/AbstractDao.java
 /Users/msansone/Documents/git/cursoJavaEE/hello-todo/src/main/java/br/com/msansone/hellotodo/rest/TodoRest.java
 /Users/msansone/Documents/git/cursoJavaEE/hello-todo/src/main/java/br/com/msansone/hellotodo/dao/TodoDao.java
+/Users/msansone/Documents/git/cursoJavaEE/hello-todo/src/main/java/br/com/msansone/hellotodo/entity/AbstractEntity.java
 /Users/msansone/Documents/git/cursoJavaEE/hello-todo/src/main/java/br/com/msansone/hellotodo/rest/TodoConfig.java
+/Users/msansone/Documents/git/cursoJavaEE/hello-todo/src/main/java/br/com/msansone/hellotodo/dao/UsuarioDao.java
 /Users/msansone/Documents/git/cursoJavaEE/hello-todo/src/main/java/br/com/msansone/hellotodo/entity/Todo.java
+/Users/msansone/Documents/git/cursoJavaEE/hello-todo/src/main/java/br/com/msansone/hellotodo/entity/Usuario.java
