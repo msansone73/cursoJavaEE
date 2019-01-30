@@ -1,9 +1,14 @@
 package br.com.msansone.hellotodo.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
@@ -22,8 +27,16 @@ public class Usuario {
 	@NotEmpty(message="Campo senha é obrigatório.")
 	private String senha;
 	
+	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	private List<Todo> todos;
 	
 	
+	public List<Todo> getTodos() {
+		return todos;
+	}
+	public void setTodos(List<Todo> todos) {
+		this.todos = todos;
+	}
 	public Long getId() {
 		return id;
 	}
